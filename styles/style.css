@@ -1,0 +1,23 @@
+body{
+    background-color: #d3cfcf;
+    height: 100vh;
+}
+.height{
+    height: 100vh;
+    overflow: hidden;
+}
+
+.corpText{
+    font-weight:900;
+    font-size: xx-large;
+    color: blue;
+}
+
+.bg{
+    background-color: white;
+}
+
+.desc{
+    font-weight:500;
+    font-size: x-large;
+}

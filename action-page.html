@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="datatables/jquery.js"></script>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="datatables/datatables.min.css"/>
+        <script src="datatables/jquery.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+    </head>
+<body>
+<div class='jumbotron'>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                    <span class="sr-only">(current)</span>
+                  </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <input id="searchbar" onkeyup="search_text()" type="text"
+              name="search" placeholder="Search the webpage" class='form-text'> 
+            </li>
+          </ul>
+        </div>
+        <div>
+          
+    
+        </div>
+      </div>
+    </nav>
+    <div class='mt-5'>
+      <p class="a" id='about'>
+        This page is about creating simple HTML elements with NAVBAR and table with filter to search, pagination and a dark header
+      </p>
+     <p class="a" id='services'>The services provided in this page are just bootstrap learning and implementation.</p>
+     <p class="a" id='contact'>This page was created by Sharmila Devi R. Please contact her</p>
+      
+  
+      <p>The datatable is dispalyed below</p>
+      <table id="sample" class="table thead-dark table-bordered table-hover table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>ID</th>
+            <th>User</th>
+            <th>Amount</th>
+  
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>AAAAA</td>
+            <td>$12</td>
+    
+          </tr>
+    
+          <tr>
+            <td>2</td>
+            <td>BBBBB</td>
+            <td>$7</td>
+    
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>CCCCC</td>
+            <td>$7</td>
+    
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>DDDDD</td>
+            <td>$83</td>
+    
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>EEEEE</td>
+            <td>$47</td>
+    
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>FFFFF</td>
+            <td>$77</td>
+    
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>GGGGG</td>
+            <td>$74</td>
+    
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>HHHHH</td>
+            <td>$67</td>
+    
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>IIIII</td>
+            <td>$57</td>
+    
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>JJJJJ</td>
+            <td>$37</td>
+    
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>KKKKK</td>
+            <td>$47</td>
+    
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>LLLLL</td>
+            <td>$37</td>
+    
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>MMMMM</td>
+            <td>$47</td>
+    
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>NNNNN</td>
+            <td>$27</td>
+    
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>OOOOO</td>
+            <td>$73</td>
+    
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>PPPPP</td>
+            <td>$93</td>
+    
+          </tr> 
+        </tbody>
+      </table>
+    </div>
+  </div>
+    <script src="datatables/datatables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#sample').DataTable();
+        } );
+        function search_text() { 
+            let input = document.getElementById('searchbar').value 
+            input=input.toLowerCase(); 
+            let x = document.getElementsByClassName('a'); 
+              for (i = 0; i < x.length; i++) {  
+                  if (!x[i].innerHTML.toLowerCase().includes(input)) { 
+                    x[i].style.display="none"; 
+                } else { 
+                  x[i].style.display="list-item";  
+                  x[i].style.listStyleType = 'none';      
+              } 
+                
+            } 
+            } 
+            
+    </script>
+</body>
+</html>
